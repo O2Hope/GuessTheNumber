@@ -1,9 +1,19 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, TextInput, Button } from "react-native";
+import Card from "../components/card"
+import Colors from "../constants/colors"
 
 const StartGame = () => (
   <View style={styles.screen}>
-    <Text>Game Screen</Text>
+    <Text style={styles.title}>Start a bew game!</Text>
+    <Card style={styles.inputContainer}>
+      <Text> Select a number</Text>
+      <TextInput />
+      <View style={styles.buttonsContainer}>
+        <View style={styles.button}><Button  title="Reset" onPress={() => {}} color={Colors.accent}/></View>
+        <View style={styles.button}><Button  title="Confirm" onPress={() => {}} color={Colors.primary}/></View>
+      </View>
+    </Card>
   </View>
 );
 
@@ -13,6 +23,24 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: "center",
   },
+  title: {
+    fontSize: 20,
+    marginVertical: 10,
+  },
+  inputContainer: {
+      width: 300,
+      maxWidth: "80%",
+      alignItems: "center"
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: "space-between",
+    paddingHorizontal: 15
+  },
+  button: {
+      width: 100
+  }
 });
 
 export default StartGame;
