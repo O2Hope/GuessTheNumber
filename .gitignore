@@ -12,3 +12,9 @@ web-report/
 
 # macOS
 .DS_Store
+/.idea/GuessTheNumber.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/package-lock.json
+/.idea/vcs.xml
+/.idea/workspace.xml
